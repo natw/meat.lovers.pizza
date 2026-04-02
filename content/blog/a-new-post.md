@@ -11,3 +11,9 @@ tags: ["markdown","syntax",]
 ---
 
 This is a page about »A New Post«.
+
+```go
+func main() {
+    fmt.Println("hi!")
+}
+```
