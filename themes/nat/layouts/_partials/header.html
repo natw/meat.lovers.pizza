@@ -1,4 +1,10 @@
 <a href="{{ "" | relURL }}" class="title">
+  <img id="pizza" src="/images/mlp.png" />
   <h2>{{ .Site.Title }}</h2>
 </a>
-<nav>{{- partial "nav.html" . -}}</nav>
+
+<nav>
+  {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+</nav>

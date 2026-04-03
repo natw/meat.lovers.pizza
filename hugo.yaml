@@ -10,13 +10,18 @@ copyright: "Copyright © 2026, Nat Williams"
 
 enableRobotsTXT: true
 
-permalinks:
-  blog: "/:slug/"
-  tags: "/blog/:slug"
+menus:
+  main:
+    - name: Github
+      weight: 900
+      url: "https://github.com/natw"
+    - name: Email
+      weight: 1000
+      url: "mailto:nat.williams@gmail.com"
 
 params:
   description: "some blog"
-  favicon: "images/favicon.png"
+  favicon: "images/mlp.png"
 
 markup:
   highlight:
