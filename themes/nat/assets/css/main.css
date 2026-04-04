@@ -1,17 +1,11 @@
 @import "reset.css";
 
 :root {
-  /* --bg-color: #494f5c; */
-  /* --menu-bg: #454854; */
-  --link-color: #d64642;
-  /* --text-color: rgb(238, 238, 238); */
-
-  --bg-color: rgba(156, 215, 255, 0.6);
-  --menu-bg: rgba(122, 170, 206, 0.4);
   --text-color: #202020;
+  --link-color: #d64642;
 
-  /* --bg-color: rgba(255, 252, 245, 0.6); */
-  /* --menu-bg: rgba(253, 245, 234, 1); */
+  --bg-color: rgba(255, 252, 245, 1);
+  --menu-bg: rgba(230, 230, 230, 1);
 
   --sidebar-width: 260px;
   --pizza-height: 300px;
