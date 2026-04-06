@@ -7,10 +7,11 @@ date: "2026-04-02T09:22:51-05:00"
 #
 # description: "An optional description for SEO. If not provided, an automatically created summary will be used."
 
-tags: ["markdown","syntax",]
+tags:
+  - go
 ---
 
-This is a page about »A New Post«.
+This is a post.
 
 ```go
 func main() {
