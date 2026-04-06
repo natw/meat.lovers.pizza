@@ -1,32 +1,30 @@
 {{ define "main" }}
-<content>
-  this is list.html
-  <ul class="blog-posts">
-    {{ range .Pages }}
-    <li>
-      <span>
-        <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}'>
-            {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
-          </time>
-        </i>
-      </span>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
-    {{ else }}
-    <li>
-      No posts yet
-    </li>
-    {{ end }}
-  </ul>
-  {{ if not .Data.Singular }}
-  <small>
-    <div>
-      {{ range .Site.Taxonomies.tags }}
-      <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+
+{{ if eq .Type "tags" }}
+  <h2>#{{ .LinkTitle | lower }}</h2>
+{{ else }}
+  <h2>{{ .LinkTitle }}</h2>
+{{ end }}
+
+<content class="list">
+  {{ range .Pages.GroupByDate "2006" }}
+    <h3>{{ .Key }}</h3>
+    <ul class="posts">
+      {{ range .Pages }}
+        <li>
+            <time datetime='{{ .Date.Format "2006-01-02" }}'>
+              {{ .Date.Format "Jan 02, 2006" }}
+            </time>
+            -
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
       {{ end }}
-    </div>
-  </small>
+    </ul>
+  {{ else }}
+    <ul>
+      <li> No posts yet </li>
+    </ul>
   {{ end }}
 </content>
+
 {{ end }}

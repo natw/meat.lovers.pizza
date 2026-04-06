@@ -25,7 +25,7 @@ params:
 
 markup:
   highlight:
-    style: gruvbox
+    style: tango
     lineNos: false
     lineNumbersInTable: false
     codeFences: true

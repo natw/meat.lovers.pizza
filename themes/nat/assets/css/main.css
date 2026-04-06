@@ -5,7 +5,7 @@
   --link-color: #d64642;
 
   --bg-color: rgba(255, 252, 245, 1);
-  --menu-bg: rgba(230, 230, 230, 1);
+  --menu-bg: rgba(255, 252, 245, 1);
 
   --sidebar-width: 260px;
   --pizza-height: 300px;
@@ -125,7 +125,10 @@ ul.posts {
   }
 }
 
-content.section {
+content {
+  margin-top: 50px;
+  display: block;
+
   h3 {
     margin-top: 30px;
   }
@@ -137,3 +140,8 @@ content.section {
     font-weight: 500;
   }
 }
+
+pre code {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
